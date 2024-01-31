@@ -1,27 +1,4 @@
-﻿class Program
-{
-    static void Main()
-    {
-        List<Tuple<int, int>> graph = new List<Tuple<int, int>>
-        {
-            Tuple.Create(1, 2),
-            Tuple.Create(1, 3),
-            Tuple.Create(2, 4),
-            Tuple.Create(3, 4),
-            Tuple.Create(4, 5),
-            Tuple.Create(4, 6)
-        };
-
-        List<List<int>> paths = GraphResolver.ConnectingPaths(graph, 1, 4);
-
-        foreach (var path in paths)
-        {
-            Console.WriteLine("[" + string.Join(",", path) + "]");
-        }
-    }
-}
-
-class GraphResolver
+﻿class GraphResolver
 {
     public static List<List<int>> ConnectingPaths(List<Tuple<int, int>> graph, int node1, int node2)
     {
